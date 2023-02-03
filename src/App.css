@@ -1,0 +1,49 @@
+body {
+  display: grid;
+  place-content: center;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #222;
+  display: grid;
+  place-content: center;
+  transition: .2s ease all;
+}
+
+.square.pawn:hover,
+.square.tower:hover,
+.square.horse:hover,
+.square.alfil:hover,
+.square.king:hover,
+.square.queen:hover {
+  cursor: pointer;
+  opacity: .6;
+}
+
+.square.selected {
+  border-radius: 20%;
+  opacity: .6;
+}
+
+.square.white {
+  background-color: aliceblue;
+}
+
+.square.green {
+  background-color: #769656;
+}
+
+.board {
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+
+.whiteTeam,
+.blackTeam {
+  display: grid;
+  place-content: center;
+}
